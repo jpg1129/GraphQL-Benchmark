@@ -1,0 +1,180 @@
+{
+  "ArtistById-k6-100rps": [
+    {
+      "platform": "Apollo",
+      "queryName": "ArtistById",
+      "benchmarkName": "Apollo_ArtistById-k6-100rps",
+      "requestAvg": 100.04526923501228,
+      "p90": 4.03
+    },
+    {
+      "platform": "Dotnet",
+      "queryName": "ArtistById",
+      "benchmarkName": "Dotnet_ArtistById-k6-100rps",
+      "requestAvg": 98.75466272189101,
+      "p90": 3.59
+    },
+    {
+      "platform": "Hasura",
+      "queryName": "ArtistById",
+      "benchmarkName": "Hasura_ArtistById-k6-100rps",
+      "requestAvg": 91.18046367385323,
+      "p90": 7.24
+    },
+    {
+      "platform": "Quarkus",
+      "queryName": "ArtistById",
+      "benchmarkName": "Quarkus_ArtistById-k6-100rps",
+      "requestAvg": 97.88660715440913,
+      "p90": 4.92
+    }
+  ],
+  "AllArtists-k6-100rps": [
+    {
+      "platform": "Apollo",
+      "queryName": "AllArtists",
+      "benchmarkName": "Apollo_AllArtists-k6-100rps",
+      "requestAvg": 100.03831737389044,
+      "p90": 4.73
+    },
+    {
+      "platform": "Django",
+      "queryName": "AllArtists",
+      "benchmarkName": "Django_AllArtists-k6-100rps",
+      "requestAvg": 18.14254563548571,
+      "p90": 642
+    },
+    {
+      "platform": "Dotnet",
+      "queryName": "AllArtists",
+      "benchmarkName": "Dotnet_AllArtists-k6-100rps",
+      "requestAvg": 100.05179304507502,
+      "p90": 3.46
+    },
+    {
+      "platform": "Hasura",
+      "queryName": "AllArtists",
+      "benchmarkName": "Hasura_AllArtists-k6-100rps",
+      "requestAvg": 100.02171500410059,
+      "p90": 7.26
+    },
+    {
+      "platform": "Quarkus",
+      "queryName": "AllArtists",
+      "benchmarkName": "Quarkus_AllArtists-k6-100rps",
+      "requestAvg": 98.88325214358443,
+      "p90": 8.93
+    }
+  ],
+  "Albums-k6-100rps": [
+    {
+      "platform": "Apollo",
+      "queryName": "AllArtists_Albums",
+      "benchmarkName": "Apollo_AllArtists_Albums-k6-100rps",
+      "requestAvg": 12.94081758078711,
+      "p90": 847
+    },
+    {
+      "platform": "Django",
+      "queryName": "AllArtists_Albums",
+      "benchmarkName": "Django_AllArtists_Albums-k6-100rps",
+      "requestAvg": 3.352624879697043,
+      "p90": 4150
+    },
+    {
+      "platform": "Dotnet",
+      "queryName": "AllArtists_Albums",
+      "benchmarkName": "Dotnet_AllArtists_Albums-k6-100rps",
+      "requestAvg": 97.9909387778912,
+      "p90": 5.5
+    },
+    {
+      "platform": "Hasura",
+      "queryName": "AllArtists_Albums",
+      "benchmarkName": "Hasura_AllArtists_Albums-k6-100rps",
+      "requestAvg": 99.93039214263199,
+      "p90": 15.5
+    },
+    {
+      "platform": "Quarkus",
+      "queryName": "AllArtists_Albums",
+      "benchmarkName": "Quarkus_AllArtists_Albums-k6-100rps",
+      "requestAvg": 98.6484286623289,
+      "p90": 32.1
+    }
+  ],
+  "Tracks-k6-100rps": [
+    {
+      "platform": "Apollo",
+      "queryName": "AllArtists_Albums_Tracks",
+      "benchmarkName": "Apollo_AllArtists_Albums_Tracks-k6-100rps",
+      "requestAvg": 4.91801691244965,
+      "p90": 2110
+    },
+    {
+      "platform": "Django",
+      "queryName": "AllArtists_Albums_Tracks",
+      "benchmarkName": "Django_AllArtists_Albums_Tracks-k6-100rps",
+      "requestAvg": 3.2090758910888213,
+      "p90": 3480
+    },
+    {
+      "platform": "Dotnet",
+      "queryName": "AllArtists_Albums_Tracks",
+      "benchmarkName": "Dotnet_AllArtists_Albums_Tracks-k6-100rps",
+      "requestAvg": 96.96474000557663,
+      "p90": 35.9
+    },
+    {
+      "platform": "Hasura",
+      "queryName": "AllArtists_Albums_Tracks",
+      "benchmarkName": "Hasura_AllArtists_Albums_Tracks-k6-100rps",
+      "requestAvg": 61.560847078844475,
+      "p90": 170
+    },
+    {
+      "platform": "Quarkus",
+      "queryName": "AllArtists_Albums_Tracks",
+      "benchmarkName": "Quarkus_AllArtists_Albums_Tracks-k6-100rps",
+      "requestAvg": 51.107124140341355,
+      "p90": 305
+    }
+  ],
+  "Genres-k6-100rps": [
+    {
+      "platform": "Apollo",
+      "queryName": "AllArtists_Albums_Tracks_Genres",
+      "benchmarkName": "Apollo_AllArtists_Albums_Tracks_Genres-k6-100rps",
+      "requestAvg": 0.7903868956698091,
+      "p90": 13200
+    },
+    {
+      "platform": "Django",
+      "queryName": "AllArtists_Albums_Tracks_Genres",
+      "benchmarkName": "Django_AllArtists_Albums_Tracks_Genres-k6-100rps",
+      "requestAvg": 3.023053836035918,
+      "p90": 4730
+    },
+    {
+      "platform": "Dotnet",
+      "queryName": "AllArtists_Albums_Tracks_Genres",
+      "benchmarkName": "Dotnet_AllArtists_Albums_Tracks_Genres-k6-100rps",
+      "requestAvg": 98.8744451156203,
+      "p90": 58.6
+    },
+    {
+      "platform": "Hasura",
+      "queryName": "AllArtists_Albums_Tracks_Genres",
+      "benchmarkName": "Hasura_AllArtists_Albums_Tracks_Genres-k6-100rps",
+      "requestAvg": 44.180096020782955,
+      "p90": 241
+    },
+    {
+      "platform": "Dotnet",
+      "queryName": "AllArtists_Albums_Tracks_Genres",
+      "benchmarkName": "Dotnet_AllArtists_Albums_Tracks_Genres-k6-100rps",
+      "requestAvg": 51.29062886115779,
+      "p90": 193
+    }
+  ]
+}

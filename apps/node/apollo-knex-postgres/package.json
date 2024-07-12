@@ -1,0 +1,17 @@
+{
+  "scripts": {
+    "dev": "nodemon server.js",
+    "start": "node server.js",
+    "pm2-apollo-clustered": "yarn pm2 start ecosystem.config.js --only apollo-clustered"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "apollo-server": "^3.3.0",
+    "graphql": "^15.5.3",
+    "knex": "^0.95.11",
+    "nodemon": "^2.0.12",
+    "objection": "^2.2.15",
+    "pg": "^8.7.1",
+    "pm2": "^5.1.1"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "json.schemas": [
+    {
+      "fileMatch": ["*.clangd.json"],
+      "url": "./clangd-vscode/clangd.schema.json"
+    }
+  ],
+  "yaml.schemas": {
+    "./clangd.schema.json": ".clangd.yaml",
+    "*.clangd.yaml": "./clangd-vscode/clangd.schema.json"
+  },
+  "files.watcherExclude": {
+    "**/target": true
+  }
+}

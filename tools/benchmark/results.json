@@ -1,0 +1,252 @@
+{
+  "ArtistById-k6-100rps": [
+    {
+      "queryName": "ArtistById",
+      "benchmarkName": "Apollo_ArtistById-k6-100rps",
+      "requests": {
+        "count": 1001,
+        "average": 100.04746507608856
+      },
+      "p90": 3.89,
+      "p99": 6.07
+    },
+    {
+      "queryName": "ArtistById",
+      "benchmarkName": "Dotnet_ArtistById-k6-100rps",
+      "requests": {
+        "count": 753,
+        "average": 75.28931343485107
+      },
+      "p90": 3.85,
+      "p99": 2490
+    },
+    {
+      "queryName": "ArtistById",
+      "benchmarkName": "Hasura_ArtistById-k6-100rps",
+      "requests": {
+        "count": 904,
+        "average": 90.38819801298544
+      },
+      "p90": 6.97,
+      "p99": 1030
+    },
+    {
+      "queryName": "ArtistById",
+      "benchmarkName": "Quarkus_ArtistById-k6-100rps",
+      "requests": {
+        "count": 798,
+        "average": 79.74752294000456
+      },
+      "p90": 5.23,
+      "p99": 2060
+    }
+  ],
+  "AllArtists-k6-100rps": [
+    {
+      "queryName": "AllArtists",
+      "benchmarkName": "Apollo_AllArtists-k6-100rps",
+      "requests": {
+        "count": 1001,
+        "average": 100.02944223233258
+      },
+      "p90": 5.97,
+      "p99": 9.83
+    },
+    {
+      "queryName": "AllArtists",
+      "benchmarkName": "Django_AllArtists-k6-100rps",
+      "requests": {
+        "count": 141,
+        "average": 13.527522810089774
+      },
+      "p90": 868,
+      "p99": 985
+    },
+    {
+      "queryName": "AllArtists",
+      "benchmarkName": "Dotnet_AllArtists-k6-100rps",
+      "requests": {
+        "count": 1001,
+        "average": 100.04510025123714
+      },
+      "p90": 3.56,
+      "p99": 4.52
+    },
+    {
+      "queryName": "AllArtists",
+      "benchmarkName": "Hasura_AllArtists-k6-100rps",
+      "requests": {
+        "count": 1001,
+        "average": 100.02166203407829
+      },
+      "p90": 7.07,
+      "p99": 50.8
+    },
+    {
+      "queryName": "AllArtists",
+      "benchmarkName": "Quarkus_AllArtists-k6-100rps",
+      "requests": {
+        "count": 338,
+        "average": 33.31199361765856
+      },
+      "p90": 387,
+      "p99": 542
+    }
+  ],
+  "Albums-k6-100rps": [
+    {
+      "queryName": "AllArtists_Albums",
+      "benchmarkName": "Apollo_AllArtists_Albums-k6-100rps",
+      "requests": {
+        "count": 81,
+        "average": 7.197684073172616
+      },
+      "p90": 1670,
+      "p99": 2140
+    },
+    {
+      "queryName": "AllArtists_Albums",
+      "benchmarkName": "Django_AllArtists_Albums-k6-100rps",
+      "requests": {
+        "count": 26,
+        "average": 2.4600698726076473
+      },
+      "p90": 5770,
+      "p99": 5840
+    },
+    {
+      "queryName": "AllArtists_Albums",
+      "benchmarkName": "Dotnet_AllArtists_Albums-k6-100rps",
+      "requests": {
+        "count": 1000,
+        "average": 99.98250606091453
+      },
+      "p90": 5.82,
+      "p99": 19.4
+    },
+    {
+      "queryName": "AllArtists_Albums",
+      "benchmarkName": "Hasura_AllArtists_Albums-k6-100rps",
+      "requests": {
+        "count": 1001,
+        "average": 99.94524578088534
+      },
+      "p90": 15.7,
+      "p99": 64.2
+    },
+    {
+      "queryName": "AllArtists_Albums",
+      "benchmarkName": "Quarkus_AllArtists_Albums-k6-100rps",
+      "requests": {
+        "count": 112,
+        "average": 10.852055955913523
+      },
+      "p90": 1060,
+      "p99": 1170
+    }
+  ],
+  "Tracks-k6-100rps": [
+    {
+      "queryName": "AllArtists_Albums_Tracks",
+      "benchmarkName": "Apollo_AllArtists_Albums_Tracks-k6-100rps",
+      "requests": {
+        "count": 40,
+        "average": 3.2291443973432474
+      },
+      "p90": 3200,
+      "p99": 3880
+    },
+    {
+      "queryName": "AllArtists_Albums_Tracks",
+      "benchmarkName": "Django_AllArtists_Albums_Tracks-k6-100rps",
+      "requests": {
+        "count": 26,
+        "average": 2.4201866202179487
+      },
+      "p90": 6480,
+      "p99": 6520
+    },
+    {
+      "queryName": "AllArtists_Albums_Tracks",
+      "benchmarkName": "Dotnet_AllArtists_Albums_Tracks-k6-100rps",
+      "requests": {
+        "count": 305,
+        "average": 30.315755390300342
+      },
+      "p90": 387,
+      "p99": 516
+    },
+    {
+      "queryName": "AllArtists_Albums_Tracks",
+      "benchmarkName": "Hasura_AllArtists_Albums_Tracks-k6-100rps",
+      "requests": {
+        "count": 617,
+        "average": 61.324300962852156
+      },
+      "p90": 174,
+      "p99": 197
+    },
+    {
+      "queryName": "AllArtists_Albums_Tracks",
+      "benchmarkName": "Quarkus_AllArtists_Albums_Tracks-k6-100rps",
+      "requests": {
+        "count": 23,
+        "average": 1.936696465688938
+      },
+      "p90": 6230,
+      "p99": 6990
+    }
+  ],
+  "Genres-k6-100rps": [
+    {
+      "queryName": "AllArtists_Albums_Tracks_Genres",
+      "benchmarkName": "Apollo_AllArtists_Albums_Tracks_Genres-k6-100rps",
+      "requests": {
+        "count": 12,
+        "average": 0.4238586292445839
+      },
+      "p90": 24000,
+      "p99": 25100
+    },
+    {
+      "queryName": "AllArtists_Albums_Tracks_Genres",
+      "benchmarkName": "Django_AllArtists_Albums_Tracks_Genres-k6-100rps",
+      "requests": {
+        "count": 28,
+        "average": 2.499334016746466
+      },
+      "p90": 5760,
+      "p99": 6370
+    },
+    {
+      "queryName": "AllArtists_Albums_Tracks_Genres",
+      "benchmarkName": "Dotnet_AllArtists_Albums_Tracks_Genres-k6-100rps",
+      "requests": {
+        "count": 203,
+        "average": 19.78483899872848
+      },
+      "p90": 675,
+      "p99": 822
+    },
+    {
+      "queryName": "AllArtists_Albums_Tracks_Genres",
+      "benchmarkName": "Hasura_AllArtists_Albums_Tracks_Genres-k6-100rps",
+      "requests": {
+        "count": 445,
+        "average": 44.14322693555824
+      },
+      "p90": 246,
+      "p99": 285
+    },
+    {
+      "queryName": "AllArtists_Albums_Tracks_Genres",
+      "benchmarkName": "Dotnet_AllArtists_Albums_Tracks_Genres-k6-100rps",
+      "requests": {
+        "count": 18,
+        "average": 1.3120085489310818
+      },
+      "p90": 10100,
+      "p99": 10200
+    }
+  ]
+}

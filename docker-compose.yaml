@@ -1,0 +1,64 @@
+version: '3.6'
+
+#################################################
+# VARIABLES
+x-POSTGRES_DB_URL: &postgres_db_url postgresql://postgres:postgrespassword@postgres:5432/postgres
+
+# Used to set containers to be resource constrained
+# NOTE: THIS REQUIRES THE "--compatibility" FLAG IN "docker-compose up" OR ELSE IT >>DOES NOTHING!!<<
+# $ docker-compose --compatibility up -d
+x-RESOURCE-CONSTRAINED-BENCH-CONFIG: &resource_constrained_bench_config
+  oom_kill_disable: true
+  deploy:
+    resources:
+      limits:
+        cpus: 4
+        memory: 4G
+##################################################
+
+services:
+  #############################
+  # DATABASES
+  postgres:
+    image: postgres:13
+    ports:
+      - '5432:5432'
+    restart: always
+    volumes:
+      - db_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: postgrespassword
+  # APPS
+  graphql-engine:
+    <<: *resource_constrained_bench_config
+    image: hasura/graphql-engine:v2.12.0
+    ports:
+      - '8080:8080'
+    depends_on:
+      - 'postgres'
+    restart: always
+    environment:
+      HASURA_GRAPHQL_METADATA_DATABASE_URL: *postgres_db_url
+      ## enable the console served by server
+      HASURA_GRAPHQL_ENABLE_CONSOLE: 'true' # set to "false" to disable console
+      ## enable debugging mode. It is recommended to disable this in production
+      HASURA_GRAPHQL_DEV_MODE: 'true'
+      HASURA_GRAPHQL_ENABLED_LOG_TYPES: startup, http-log, webhook-log, websocket-log, query-log
+      ## uncomment next line to set an admin secret
+      # HASURA_GRAPHQL_ADMIN_SECRET: myadminsecretkey
+  apollo-knex:
+    <<: *resource_constrained_bench_config
+    build:
+      context: ./apps/node/apollo-knex-postgres
+      dockerfile: Dockerfile
+    ports:
+      - '4000:4000'
+    depends_on:
+      - 'postgres'
+    restart: always
+    environment:
+      DATABASE_URL: *postgres_db_url
+      NODE_ENV: production
+
+volumes:
+  db_data:

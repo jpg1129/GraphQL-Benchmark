@@ -1,0 +1,89 @@
+# Paramaters
+X-Variables: &defaults
+  tools: [k6]
+  execution_strategy: REQUESTS_PER_SECOND
+  duration: 120s
+  connections: 1000
+  rps: 10
+# Benchmarks
+url: http://localhost:4000/graphql
+debug: false
+headers:
+  'Content-Type': application/json
+queries:
+  - name: Apollo_AllAlbums
+    <<: *defaults
+    query: |
+      query Apollo_AllAlbums {
+        album {
+            id
+            title 
+            artist_id 
+          }
+      }
+
+  - name: Apollo_AllArtists_Albums
+    <<: *defaults
+    query: |
+      query Apollo_AllArtists_Albums {
+        artist {
+          id
+          name
+          albums {
+            id
+            title
+          }
+        }
+      }
+
+  - name: Apollo_AllArtists_Albums_Authz
+    <<: *defaults
+    query: |
+      query Apollo_AllArtists_Albums_Authz {
+        artist {
+          id
+          name
+          albums_by_authz {
+            id
+            title
+          }
+        }
+      }
+
+  - name: Apollo_AllArtists_Albums_Tracks
+    <<: *defaults
+    query: |
+      query Apollo_AllArtists_Albums_Tracks {
+        artist {
+          id
+          name
+          albums {
+            id
+            title
+            tracks {
+              id
+              name
+              composer
+            }
+          }
+        }
+      }
+
+  - name: Apollo_AllArtists_Albums_Tracks_Authz
+    <<: *defaults
+    query: |
+      query Apollo_AllArtists_Albums_Tracks_Authz {
+        artist {
+          id
+          name
+          albums_by_authz {
+            id
+            title
+            tracks {
+              id
+              name
+              composer
+            }
+          }
+        }
+      }

@@ -1,0 +1,57 @@
+# Paramaters
+X-Variables: &defaults
+  tools: [k6]
+  execution_strategy: REQUESTS_PER_SECOND
+  duration: 10s
+  connections: 400
+  rps: 10
+
+# Benchmarks
+url: http://localhost:8080/v1/graphql
+debug: false
+headers:
+  'Content-Type': application/json
+queries:
+  - name: Hasura_AllAlbums
+    <<: *defaults
+    query: |
+      query Hasura_AllAlbums {
+        albums {
+            id
+            title 
+            artist_id 
+          }
+      }
+
+  - name: Hasura_AllArtists_Albums
+    <<: *defaults
+    query: |
+      query Hasura_AllArtists_Albums {
+        artists {
+          id
+          name
+          albums {
+            id
+            title
+          }
+        }
+      }
+
+  - name: Hasura_AllArtists_Albums_Tracks
+    <<: *defaults
+    query: |
+      query Hasura_AllArtists_Albums_Tracks {
+        artists {
+          id
+          name
+          albums {
+            id
+            title
+            tracks {
+              id
+              name
+              composer
+            }
+          }
+        }
+      }

@@ -1,0 +1,28 @@
+table:
+  name: albums
+  schema: public
+object_relationships:
+  - name: artist
+    using:
+      foreign_key_constraint_on: artist_id
+array_relationships:
+  - name: tracks
+    using:
+      foreign_key_constraint_on:
+        column: album_id
+        table:
+          name: tracks
+          schema: public
+select_permissions:
+  - role: user
+    permission:
+      columns:
+        - artist_id
+        - id
+        - title
+      filter:
+        _and:
+          - title:
+              _ilike: '%the%'
+          - artist_id:
+              _gt: X-Hasura-User-Id
